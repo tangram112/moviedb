@@ -1,12 +1,12 @@
 ﻿@model moviedb.Models.Movie
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Usuwanie";
 }
 
-<h2>Delete</h2>
+<h2>@ViewBag.Title</h2>
 <p>
-<h3>Are you sure you want to delete this?</h3>
+<h3>Czy napewno usunąć wybrany film ?</h3>
 </p>
 <fieldset>
     <legend>Movie</legend>
@@ -55,7 +55,7 @@
 </fieldset>
 @using (Html.BeginForm()) {
     <p>
-        <input type="submit" value="Delete" /> |
-        @Html.ActionLink("Back to List", "Index")
+        <input type="submit" value="Usuń" /> |
+        @Html.ActionLink("Wróć do przeglądarki filmów", "Index")
     </p>
 }

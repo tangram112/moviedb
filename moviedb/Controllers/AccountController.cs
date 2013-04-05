@@ -81,7 +81,8 @@ namespace moviedb.Controllers
                 {
                     WebSecurity.CreateUserAndAccount(model.UserName, model.Password);
                     WebSecurity.Login(model.UserName, model.Password);
-                    return RedirectToAction("Index", "Home");
+                    // dartst return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Movies");
                 }
                 catch (MembershipCreateUserException e)
                 {

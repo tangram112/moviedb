@@ -1,34 +1,39 @@
 ﻿@{
-    ViewBag.Title = "About";
+    ViewBag.Title = "O aplikacji";
 }
 
 <hgroup class="title">
     <h1>@ViewBag.Title.</h1>
-    <h2>@ViewBag.Message</h2>
+    @*<h2>@ViewBag.Message</h2>*@
 </hgroup>
 
 <article>
     <p>
+        Aplikacja to projekt zaliczeniowy indywidualny, stworzony wyjątkowo w C# asp.net z zastowowanie technologii MVC4.
+    </p>
+
+@*    <p>
         Use this area to provide additional information.
     </p>
 
     <p>
         Use this area to provide additional information.
-    </p>
-
-    <p>
-        Use this area to provide additional information.
-    </p>
+    </p>*@
 </article>
 
 <aside>
-    <h3>Aside Title</h3>
+    <h3>Na skróty</h3>
     <p>
-        Use this area to provide additional information.
+        Z nami szybko i pewnie do celu ...
     </p>
     <ul>
-        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-        <li>@Html.ActionLink("About", "About", "Home")</li>
-        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        <li>@Html.ActionLink("Strona domowa", "Index", "Home")</li>
+        <li>@Html.ActionLink("O aplikacji", "About", "Home")</li>
+        <li>@Html.ActionLink("Dane kontaktowe", "Contact", "Home")</li>
+        @*dartst - jak jest zalogowany*@
+        @if (Request.IsAuthenticated)
+        {
+            <li>@Html.ActionLink("Przeglądarka filmów", "Index", "Movies")</li>
+        }
     </ul>
 </aside>
