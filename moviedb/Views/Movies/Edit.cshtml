@@ -4,7 +4,7 @@
     ViewBag.Title = "Edycja";
 }
 
-<h2>@ViewBag.Title</h2>
+<h2>@ViewBag.Title danych filmu</h2>
 <br />
 
 @using (Html.BeginForm()) {
@@ -44,7 +44,7 @@
 
         <div class="editor-label">
             @*@Html.LabelFor(model => model.ReleaseDate)*@
-            <label for="ReleaseDate"><font color="red">*Data prod. ( yyyy-mm-dd )</font></label>
+            <label for="ReleaseDate"><font color="red">*Data prod. ( rrrr-mm-dd )</font></label>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.ReleaseDate)
