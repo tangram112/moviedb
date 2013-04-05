@@ -1,0 +1,78 @@
+﻿@model moviedb.Models.Movie
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Movie</legend>
+
+  @*      <div class="editor-label">
+            @Html.LabelFor(model => model.OwnerId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OwnerId)
+            @Html.ValidationMessageFor(model => model.OwnerId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OwnerName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OwnerName)
+            @Html.ValidationMessageFor(model => model.OwnerName)
+        </div>*@
+
+        <div class="editor-label">
+            @*@Html.LabelFor(model => model.Title)*@
+            <label for="Title"><font color="red">*Tytuł</font></label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Title)
+            @Html.ValidationMessageFor(model => model.Title)
+        </div>
+
+        <div class="editor-label">
+            @*@Html.LabelFor(model => model.ReleaseDate)*@
+            <label for="ReleaseDate"><font color="red">*Data prod. ( yyyy-mm-dd )</font></label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ReleaseDate)
+            @Html.ValidationMessageFor(model => model.ReleaseDate)
+        </div>
+
+        <div class="editor-label">
+            @*@Html.LabelFor(model => model.Genre)*@
+            <label for="Genre"><font color="red">*Gatunek</font></label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Genre)
+            @Html.ValidationMessageFor(model => model.Genre)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.WhoBorrowed)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.WhoBorrowed)
+            @Html.ValidationMessageFor(model => model.WhoBorrowed)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
